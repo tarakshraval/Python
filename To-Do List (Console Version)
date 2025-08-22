@@ -1,0 +1,24 @@
+tasks = []
+
+def show_menu():
+    print("\n📝 To-Do List")
+    print("1. Add task")
+    print("2. View tasks")
+    print("3. Exit")
+
+while True:
+    show_menu()
+    choice = input("Choose: ")
+    if choice == "1":
+        task = input("Enter new task: ")
+        tasks.append(task)
+        print("✅ Task added!")
+    elif choice == "2":
+        print("\nYour tasks:")
+        for i, t in enumerate(tasks, 1):
+            print(f"{i}. {t}")
+    elif choice == "3":
+        print("👋 Goodbye!")
+        break
+    else:
+        print("❌ Invalid choice, try again.")
