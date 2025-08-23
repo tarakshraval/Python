@@ -1,0 +1,14 @@
+import random
+
+def roll_dice():
+    return random.randint(1, 6)
+
+print("🎲 Dice Roller Simulator")
+while True:
+    input("Press Enter to roll the dice... ")
+    print("You rolled:", roll_dice())
+    
+    again = input("Roll again? (y/n): ").lower()
+    if again != "y":
+        print("👋 Goodbye!")
+        break
