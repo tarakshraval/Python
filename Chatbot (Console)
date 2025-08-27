@@ -1,0 +1,14 @@
+responses = {
+    "hi": "Hello there! 👋",
+    "how are you": "I'm doing great, thanks for asking!",
+    "bye": "Goodbye! Have a nice day!"
+}
+
+while True:
+    user = input("You: ").lower()
+    if user in responses:
+        print("Bot:", responses[user])
+    else:
+        print("Bot: Sorry, I don't understand that.")
+    if user == "bye":
+        break
