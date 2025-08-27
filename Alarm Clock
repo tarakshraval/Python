@@ -1,0 +1,13 @@
+import datetime
+import time
+import winsound  # for Windows (use `os.system('say "Alarm"')` on Mac)
+
+alarm_time = input("Enter alarm time (HH:MM:SS): ")
+
+while True:
+    now = datetime.datetime.now().strftime("%H:%M:%S")
+    if now == alarm_time:
+        print("⏰ Wake up!")
+        winsound.Beep(2500, 1000)
+        break
+    time.sleep(1)
